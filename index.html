@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Buffer Now | Preview Before Submit</title>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+
+
+
+</head>
+<body>
+<div id="page">
+    <form action="" method="POST" id="myform" class="myform">
+        <fieldset>
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="age">Age</label>
+        <input type="text" id="age" ><br>
+        <label for="gender">Gender</label>
+        <input type="text" id="gender"><br>
+        <label for="disease">Disease</label>
+        <input type="text" id="disease"><br>
+        <label for="prescription">Prescription</label>
+        <input type="text" id="prescription"><br>
+        <input id="preview" type="submit" value="Preview">
+    </fieldset>
+    </form>
+</div>
+</body>
+<script>
+    var commands = {
+   // annyang will capture anything after a splat (*) and pass it to the function.
+   // e.g. saying "Show me Batman and Robin" is the same as calling showFlickr('Batman and Robin');
+   'name *tag': funcName,
+   'age *tag': funcAge,
+   'gender *tag': funcGender,
+   'prescription *tag': funcPrescription,
+   'disease *tag': funcDisease,
+'preview' :	funcPreview
+
+   // A named variable is a one word variable, that can fit anywhere in your command.
+   // e.g. saying "calculate October stats" will call calculateStats('October');
+   //'calculate :month stats': calculateStats,
+
+   // By defining a part of the following command as optional, annyang will respond to both:
+   // "say hello to my little friend" as well as "say hello friend"
+   //'say hello (to my little) friend': greeting
+};
+
+// var showFlickr = function(tag) {
+//   var url = 'http://api.flickr.com/services/rest/?tags='+tag;
+//   $.getJSON(url);
+// }
+
+// var calculateStats = function(month) {
+//   $('#stats').text('Statistics for '+month);
+// }
+
+// var greeting = function() {
+//   $('#greeting').text('Hello!');
+// }
+function funcName(tag){
+   console.log("from the function")
+   $('#name').val(' '+tag);
+   
+}
+function funcDisease(tag){
+   $('#disease').val(' '+tag);
+}
+function funcPrescription(tag){
+   console.log("from the function")
+   $('#prescription').val(' '+tag);
+   
+}
+function funcAge(tag){
+   console.log("from the age function")
+   $('#age').val(' '+tag);
+   
+}
+function funcGender(tag){
+   console.log("from the function")
+   $('#gender').val(' '+tag);
+   
+}
+function funcPreview(){
+   $('#myform').previewForm();
+}
+annyang.addCommands(commands);
+annyang.debug();
+annyang.start();
+</script>
+<link rel="stylesheet" type="text/css" href="previewForm/previewForm.css" />
+<script src="previewForm/previewForm.js"></script>
+<script>
+	var target_div = document.getElementById('preview')
+	console.log(target_div);
+	target_div.addEventListener('click',function() {
+	    $('#myform').previewForm();
+	});
+// $(document).ready(function() {
+// 	$('#myform').previewForm();
+// });
+</script>
+
+</html>
