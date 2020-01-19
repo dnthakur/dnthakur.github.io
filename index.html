@@ -40,7 +40,7 @@
    'gender *tag': funcGender,
    'prescription *tag': funcPrescription,
    'disease *tag': funcDisease,
-   'preview *tag': funcPreview
+   'preview': funcPreview
 
    // A named variable is a one word variable, that can fit anywhere in your command.
    // e.g. saying "calculate October stats" will call calculateStats('October');
@@ -63,6 +63,12 @@
 // var greeting = function() {
 //   $('#greeting').text('Hello!');
 // }
+var funcPreview = function() {
+console.log("PREVIEW AAGYA RE");
+   console.log($('#myform'));
+   $('#myform').previewForm();
+
+}
 function funcName(tag){
    console.log("from the function")
    $('#name').val(' '+tag);
@@ -86,11 +92,11 @@ function funcGender(tag){
    $('#gender').val(' '+tag);
    
 }
-function funcPreview(tag){
-	console.log("PREVIEW AAGYA RE");
-	console.log($('#myform'));
-   $('#myform').previewForm();
-}
+// function funcPreview(tag){
+// 	console.log("PREVIEW AAGYA RE");
+// 	console.log($('#myform'));
+//    $('#myform').previewForm();
+// }
 annyang.addCommands(commands);
 annyang.debug();
 annyang.start();
