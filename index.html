@@ -91,7 +91,9 @@
 <link rel="stylesheet" type="text/css" href="previewForm/previewForm.css" />
 <script src="previewForm/previewForm.js"></script>
 <script>
-	$('#preview').addEventListener('click',function() {
+	var target_div = document.getElementById('preview')
+	console.log(target_div);
+	target_div.addEventListener('click',function() {
 	    $('#myform').previewForm();
 	});
 // $(document).ready(function() {
