@@ -31,17 +31,12 @@
     </form>
 </div>
 </body>
-	<script>
-
-        var target_div = document.getElementById('preview')
-
-        console.log(target_div);
-
-        target_div.addEventListener('click',function() {
-
-            $('#myform').previewForm();
-
-        });
+<script>
+	var target_div = document.getElementById('preview')
+	console.log(target_div);
+	target_div.addEventListener('click',function() {
+	$('#myform').previewForm();
+	});
 
 // $(document).ready(function() {
 
@@ -83,8 +78,7 @@
 // }
 function prev(tag) {
 console.log("PREVIEW AAGYA RE");
-   $('preview').click();
-
+$('#myform').previewForm();
 }
 function funcName(tag){
    console.log("from the function")
