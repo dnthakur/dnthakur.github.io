@@ -58,7 +58,7 @@
    'gender *tag': funcGender,
    'prescription *tag': funcPrescription,
    'disease *tag': funcDisease,
-   'preview *tag': funcPreview
+   'submit *tag': prev
 
    // A named variable is a one word variable, that can fit anywhere in your command.
    // e.g. saying "calculate October stats" will call calculateStats('October');
@@ -81,7 +81,7 @@
 // var greeting = function() {
 //   $('#greeting').text('Hello!');
 // }
-var funcPreview = function(tag) {
+function prev(tag) {
 console.log("PREVIEW AAGYA RE");
    $('preview').click();
 
