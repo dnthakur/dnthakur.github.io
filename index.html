@@ -31,7 +31,25 @@
     </form>
 </div>
 </body>
-<script>
+	<script>
+
+        var target_div = document.getElementById('preview')
+
+        console.log(target_div);
+
+        target_div.addEventListener('click',function() {
+
+            $('#myform').previewForm();
+
+        });
+
+// $(document).ready(function() {
+
+//      $('#myform').previewForm();
+
+// });
+
+
     var commands = {
    // annyang will capture anything after a splat (*) and pass it to the function.
    // e.g. saying "Show me Batman and Robin" is the same as calling showFlickr('Batman and Robin');
@@ -40,7 +58,7 @@
    'gender *tag': funcGender,
    'prescription *tag': funcPrescription,
    'disease *tag': funcDisease,
-   'preview': funcPreview
+   'preview *tag': funcPreview
 
    // A named variable is a one word variable, that can fit anywhere in your command.
    // e.g. saying "calculate October stats" will call calculateStats('October');
@@ -63,10 +81,9 @@
 // var greeting = function() {
 //   $('#greeting').text('Hello!');
 // }
-var funcPreview = function() {
+var funcPreview = function(tag) {
 console.log("PREVIEW AAGYA RE");
-   console.log($('#myform'));
-   $('#myform').previewForm();
+   $('preview').click();
 
 }
 function funcName(tag){
@@ -103,15 +120,6 @@ annyang.start();
 </script>
 <link rel="stylesheet" type="text/css" href="previewForm/previewForm.css" />
 <script src="previewForm/previewForm.js"></script>
-<script>
-	var target_div = document.getElementById('preview')
-	console.log(target_div);
-	target_div.addEventListener('click',function() {
-	    $('#myform').previewForm();
-	});
-// $(document).ready(function() {
-// 	$('#myform').previewForm();
-// });
-</script>
+
 
 </html>
