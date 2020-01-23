@@ -1,3 +1,18 @@
+function createPdf(){
+   var name=document.querySelector('#name').value;
+   var age=document.querySelector('#age').value;
+   var gender=document.querySelector('#gender).value;
+   var dis=document.querySelector('#disease').value;
+   var prescription=document.querySelector('#prescription').value;
+   var doc=new jsPDF();
+   doc.text(`Name:${name}`);
+   doc.text(`Age:${age}`);
+   doc.text(`Gender:${gender}`);
+   doc.text(`Disease:${dis}`);
+   doc.text(`Prescription:${prescription}`);
+   doc.save('a4.pdf'); 
+   
+}
 var target_div = document.getElementById('preview')
    console.log(target_div);
    target_div.addEventListener('click',function() {
