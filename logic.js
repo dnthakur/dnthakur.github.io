@@ -10,6 +10,15 @@ function createPdf(){
    doc.save('a4.pdf'); 
    
 }
+var target_btn = document.getElementById('create-btn');
+   console.log(target_btn);
+   target_btn.addEventListener('click',function() {
+   createPdf();
+   });
+
+
+
+
 var target_div = document.getElementById('preview')
    console.log(target_div);
    target_div.addEventListener('click',function() {
