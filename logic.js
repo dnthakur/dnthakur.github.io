@@ -36,6 +36,8 @@ var target_btn = document.getElementById('create-btn');
 
 
 
+
+
 var target_div = document.getElementById('preview')
    console.log(target_div);
    target_div.addEventListener('click',function() {
