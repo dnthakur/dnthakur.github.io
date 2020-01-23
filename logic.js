@@ -5,7 +5,7 @@ function createPdf(){
    var dis=document.querySelector('#disease').value;
    var prescription=document.querySelector('#prescription').value;
    var doc=new jsPDF();
-   doc.text("hello");
+   doc.text(name,10,10);
    
    doc.save('a4.pdf'); 
    
