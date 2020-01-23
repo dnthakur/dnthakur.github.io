@@ -15,13 +15,18 @@ function createPdf(){
 
 function Pdfmaker(){
 	var name=document.querySelector('#name').value;
+	var age=document.querySelector('#age').value;
+	age="Age :"+age;
+	name="Name :"+name;
 const doc = new jsPDF('p', 'px', 'a4');
 		const call = () => {
 			console.log('saving');
 			doc.save('test.pdf');
 		};
 		console.log(name);
+		console.log(age);
 		doc.fromHTML(name, 15, 15, {}, call);
+		doc.fromHTML(age, 50, 50, {}, call);
 }
 
 
