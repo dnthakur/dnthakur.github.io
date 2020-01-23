@@ -1,7 +1,7 @@
 function createPdf(){
    var name=document.querySelector('#name').value;
    var age=document.querySelector('#age').value;
-   var gender=document.querySelector('#gender).value;
+   var gender=document.querySelector('#gender').value;
    var dis=document.querySelector('#disease').value;
    var prescription=document.querySelector('#prescription').value;
    var doc=new jsPDF();
