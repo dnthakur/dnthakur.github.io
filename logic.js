@@ -12,10 +12,25 @@ function createPdf(){
    doc.save('a4.pdf'); 
    
 }
+
+function Pdfmaker(){
+const doc = new jspdf('p', 'px', 'a4');
+		const call = () => {
+			console.log('saving');
+			doc.save('test.pdf');
+		};
+		console.log(this.content.nativeElement);
+		doc.fromHTML(this.content.nativeElement, 15, 15, {}, call);}
+
+
+
+
+
+
 var target_btn = document.getElementById('create-btn');
    console.log(target_btn);
    target_btn.addEventListener('click',function() {
-   createPdf();
+   Pdfmaker();
    });
 
 
