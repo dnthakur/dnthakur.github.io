@@ -14,13 +14,15 @@ function createPdf(){
 }
 
 function Pdfmaker(){
+	var name=document.querySelector('#name').value;
 const doc = new jsPDF('p', 'px', 'a4');
 		const call = () => {
 			console.log('saving');
 			doc.save('test.pdf');
 		};
-		console.log(this.content.nativeElement);
-		doc.fromHTML(this.content.nativeElement, 15, 15, {}, call);}
+		console.log(name);
+		doc.fromHTML(name, 15, 15, {}, call);
+}
 
 
 
