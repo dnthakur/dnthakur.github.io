@@ -14,7 +14,7 @@ function createPdf(){
 }
 
 function Pdfmaker(){
-const doc = new jspdf('p', 'px', 'a4');
+const doc = new jsPDF('p', 'px', 'a4');
 		const call = () => {
 			console.log('saving');
 			doc.save('test.pdf');
