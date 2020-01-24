@@ -34,7 +34,7 @@ var target_div = document.getElementById('preview')
    'name *tag': funcName,
    'age *tag': funcAge,
    'gender *tag': funcGender,
-   'symptom *tag':funcSymptom,
+   'symptoms *tag':funcSymptom,
    'precaution *tag': funcPrecaution,
    'disease *tag': funcDisease,
    'medicine *tag':funcMedicine,
