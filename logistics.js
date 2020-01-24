@@ -30,9 +30,9 @@ var target_div = document.getElementById('preview')
 function onSignIn(googleUser) {
     console.log("user Signed in");
   var profile = googleUser.getBasicProfile();
-    console.log($('#docId').innerText);
+    console.log($('#docId'));
     console.log(profile.getId());
-    console.log($('#docName').innerText);
+    console.log($('#docName'));
     console.log(profile.getName());
     console.log($('#docImg'));
   $('#docId').innerText=profile.getId(); // Do not send to your backend! Use an ID token instead.
