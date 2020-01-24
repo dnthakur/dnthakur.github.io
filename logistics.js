@@ -28,6 +28,9 @@ var target_div = document.getElementById('preview')
 // });
 //-----------------------------------------------------------------
 function onSignIn(googleUser) {
+    console.log("usersigned in");
+    
+    
   var profile = googleUser.getBasicProfile();
     console.log($('#docId');
     console.log($('#docName');
