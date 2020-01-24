@@ -53,13 +53,14 @@ function onSignIn(googleUser) {
    'name *tag': funcName,
    'age *tag': funcAge,
    'gender *tag': funcGender,
-   'symptoms *tag':funcSymptom,
+   'symptom *tag':funcSymptom,
    'precaution *tag': funcPrecaution,
    'disease *tag': funcDisease,
    'medicine *tag':funcMedicine,
    'preview': prev,
    'PDF': done,
    'email': mailing,
+   'logout': signOut,
    // A named variable is a one word variable, that can fit anywhere in your command.
    // e.g. saying "calculate October stats" will call calculateStats('October');
    //'calculate :month stats': calculateStats,
@@ -81,6 +82,17 @@ function onSignIn(googleUser) {
 // var greeting = function() {
 //   $('#greeting').text('Hello!');
 // }
+
+  function signOut(tag) {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });     
+            $('#docId')[0].innerText="********";
+            $('#docName')[0].innerText="#######";
+            $('.container')[0].style.display="none";
+  }
+
 function mailing(tag) {
 console.log($('#mail'));
 $('#mail').click();
