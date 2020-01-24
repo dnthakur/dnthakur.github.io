@@ -26,6 +26,10 @@
 }
  .basic{
         width: 45%;
+        display: inline;
+        }
+  #docDetails{
+        margin: auto;
         }
 </style>
 </head>
@@ -36,10 +40,12 @@
     <form action="" method="POST" id="myform" class="myform">
         <fieldset>
         <div id="print">
-            <h2> Doctor's Details </h2>
-            <h3> Name : Dr. ****** </h3>
-            <h3> License ID : ###### </h3>
-            <h3> Hospital : %%%%%%%% </h3>
+            <div id="docDetails">
+            <h4> Doctor's Details </h4>
+            <h5> Name : Dr. ****** </h5>
+            <h5> License ID : ###### </h5>
+            <h5> Hospital : XXXXXXX </h5>
+            </div>
             <hr>
         <h2> Patient's Details </h2>
         <label for="name">Name</label>
@@ -59,7 +65,7 @@
         <label for="medicine">Medicine</label>
         <input type="text" class="form-control" id="medicine"><br>
         </div>
-        <input id="preview" type="submit" value="Preview">
+            <button id="preview" class="btn btn-light" type="submit" value="Preview"> </button>
         <button class="btn btn-primary" id="press">bol PDF </button>
 <!--          <button class="btn btn-danger"><a href="mailto:someone@example.com"> bol Mail </a> </button> -->
           <a href="mailto:someone@gmail.com?Subject=Hello_DocVoice" target="_top"><button id="mail" type="button" class="btn btn-danger">email bolo</button></a>
