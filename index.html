@@ -27,6 +27,7 @@
     <style>
 .container{
     width: 35%;
+    display: none;
 }
  .basic{
         width: 30%;
@@ -105,9 +106,13 @@
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
-    });
+    });     
+
             $('#docId')[0].innerText="********";
             $('#docName')[0].innerText="#######";
+            $('.container').style.display="none";
+      
+      
   }
         </script>
 <script src="logistics.js"></script>
