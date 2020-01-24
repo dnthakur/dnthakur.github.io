@@ -35,8 +35,8 @@ function onSignIn(googleUser) {
     console.log($('#docName'));
     console.log(profile.getName());
     console.log($('#docImg'));
-  $('#docId').innerText=profile.getId(); // Do not send to your backend! Use an ID token instead.
-  $('#docName').innerText=profile.getName();
+  $('#docId')[0].innerText=profile.getId(); // Do not send to your backend! Use an ID token instead.
+  $('#docName')[0].innerText=profile.getName();
 //     $("#docImg").src=profile.getImageUrl();
 //     $("#docImg").style.display="inline";
   //$(#docImg).style.=getImageUrl());
