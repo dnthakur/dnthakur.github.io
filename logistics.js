@@ -34,8 +34,10 @@ var target_div = document.getElementById('preview')
    'name *tag': funcName,
    'age *tag': funcAge,
    'gender *tag': funcGender,
-   'prescription *tag': funcPrescription,
+   'symptom *tag':funcSymptom,
+   'precaution *tag': funcPrecaution,
    'disease *tag': funcDisease,
+   'medicine *tag':funcMedicine,
    'preview': prev,
    'PDF': done,
    'email': mailing,
@@ -79,9 +81,20 @@ function funcName(tag){
 function funcDisease(tag){
    $('#disease').val(' '+tag);
 }
-function funcPrescription(tag){
+function funcMedicine(tag){
+   $('#medicine').val(' '+tag);
+}
+
+
+function funcPrecaution(tag){
    console.log("from the function")
-   $('#prescription').val(' '+tag);
+   $('#precaution').val(' '+tag);
+   
+
+}
+function funcSymptom(tag){
+   console.log("from the function")
+   $('#symptom').val(' '+tag);
    
 }
 function funcAge(tag){
