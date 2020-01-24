@@ -47,6 +47,12 @@
       width: 40%;
     float: right;
         }
+     #head{
+         display: inline;
+        }
+        #logout{
+            float: right;
+        }
 </style>
 </head>
 <body>
@@ -54,8 +60,8 @@
     
           
     <div class="container">
-                <h1> Doctor's Voice </h1>
-            <a href="#" class="btn btn-info btn-lg" onclick="signOut();"><span class="glyphicon glyphicon-log-out"></span> Log out
+                <h1 id="head"> Doctor's Voice </h1>
+            <a id="logout" href="#" class="btn btn-info btn-lg" onclick="signOut();"><span class="glyphicon glyphicon-log-out"></span> Log out
         </a>
         <hr>
     <form action="" method="POST" id="myform" class="myform">
@@ -105,7 +111,7 @@
     </form>
     <div>
 <!--    <a href="#" onclick="signOut();">Sign out</a> -->
-   <script>
+<!--    <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
@@ -118,7 +124,7 @@
       
       
   }
-        </script>
+        </script> -->
 <script src="logistics.js"></script>
 <link rel="stylesheet" type="text/css" href="previewForm/previewForm.css" />
 <script src="previewForm/previewForm.js"></script>
