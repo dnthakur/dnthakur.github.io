@@ -34,7 +34,7 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
     console.log($('#docId');
     console.log($('#docName');
-  $('#docId').innerHTML=profile.getId()); // Do not send to your backend! Use an ID token instead.
+  $('#docId').innerHTML=profile.getId(); // Do not send to your backend! Use an ID token instead.
   $('#docName').innerHTML=profile.getName();
     $("#docImg").src=getImageUrl();
     $("#docImg").style.display=inline;
