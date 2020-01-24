@@ -51,8 +51,12 @@
 </head>
 <body>
     <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    
+          
     <div class="container">
                 <h1> Doctor's Voice </h1>
+            <a href="#" class="btn btn-info btn-lg" onclick="signOut();"><span class="glyphicon glyphicon-log-out"></span> Log out
+        </a>
         <hr>
     <form action="" method="POST" id="myform" class="myform">
         <fieldset>
@@ -100,7 +104,7 @@
     </fieldset>
     </form>
     <div>
-   <a href="#" onclick="signOut();">Sign out</a>
+<!--    <a href="#" onclick="signOut();">Sign out</a> -->
    <script>
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
