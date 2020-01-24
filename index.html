@@ -38,6 +38,9 @@
      img{
          width: 25%;
         }
+      #docImg{
+        display:none;
+        width:20%;}
         
     #docDetails{
       width: 40%;
@@ -54,10 +57,11 @@
         <fieldset>
         <div id="print">
                         <img src="Rx_symbol.png">
+                        <img id="docImg">
                      <div id="docDetails">
                         <h4> Doctor's Details </h4>
-                        <h5> Name : Dr. ****** </h5>
-                        <h5> License ID : ###### </h5>
+                         <h5> Name : Dr. <span id="docName">******</span> </h5>
+                         <h5> License ID : <span id="docId">######</span> </h5>
                         <h5> Hospital : XXXXXXX </h5>
                      </div>
                         <hr>
