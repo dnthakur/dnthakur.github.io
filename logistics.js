@@ -38,7 +38,7 @@ var target_div = document.getElementById('preview')
    'disease *tag': funcDisease,
    'preview': prev,
    'PDF': done,
-    'email': mailing
+   'email': mailing,
    // A named variable is a one word variable, that can fit anywhere in your command.
    // e.g. saying "calculate October stats" will call calculateStats('October');
    //'calculate :month stats': calculateStats,
@@ -61,7 +61,7 @@ var target_div = document.getElementById('preview')
 //   $('#greeting').text('Hello!');
 // }
 function mailing(tag) {
-// console.log($('#mail'));
+console.log($('#mail'));
 $('#mail').click();
 }
 
