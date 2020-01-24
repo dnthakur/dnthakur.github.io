@@ -34,9 +34,9 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
     console.log($('#docId'));
     console.log($('#docName'));
-  $('#docId').innerHTML=profile.getId(); // Do not send to your backend! Use an ID token instead.
-  $('#docName').innerHTML=profile.getName();
-    $("#docImg").src=getImageUrl();
+  $('#docId').innerText=profile.getId(); // Do not send to your backend! Use an ID token instead.
+  $('#docName').innerText=profile.getName();
+    $("#docImg").src=profile.getImageUrl();
     $("#docImg").style.display="inline";
   //$(#docImg).style.=getImageUrl());
   //console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
