@@ -28,16 +28,17 @@ var target_div = document.getElementById('preview')
 // });
 //-----------------------------------------------------------------
 function onSignIn(googleUser) {
-    console.log("usersigned in");
-    
-    
+    console.log("user Signed in");
   var profile = googleUser.getBasicProfile();
-    console.log($('#docId'));
-    console.log($('#docName'));
+    console.log($('#docId').innerText);
+    console.log(profile.getId());
+    console.log($('#docName').innerText);
+    console.log(profile.getName());
+    console.log($('#docImg'));
   $('#docId').innerText=profile.getId(); // Do not send to your backend! Use an ID token instead.
   $('#docName').innerText=profile.getName();
-    $("#docImg").src=profile.getImageUrl();
-    $("#docImg").style.display="inline";
+//     $("#docImg").src=profile.getImageUrl();
+//     $("#docImg").style.display="inline";
   //$(#docImg).style.=getImageUrl());
   //console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
