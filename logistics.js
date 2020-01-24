@@ -28,7 +28,7 @@ var target_div = document.getElementById('preview')
 // });
 //-----------------------------------------------------------------
 function onSignIn(googleUser) {
-    $('.container').style.display="block";
+    $('.container')[0].style.display="block";
     console.log("user Signed in");
   var profile = googleUser.getBasicProfile();
     console.log($('#docId'));
