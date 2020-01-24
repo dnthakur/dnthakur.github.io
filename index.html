@@ -24,6 +24,9 @@
 .container{
     width: 35%;
 }
+ .basic{
+        width: 45%;
+        }
 </style>
 </head>
 <body>
@@ -33,12 +36,20 @@
     <form action="" method="POST" id="myform" class="myform">
         <fieldset>
         <div id="print">
+            <h2> Doctor's Details </h2>
+            <h3> Name : Dr. ****** </h3>
+            <h3> License ID : ###### </h3>
+            <h3> Hospital : %%%%%%%% </h3>
+            <hr>
+        <h2> Patient's Details </h2>
         <label for="name">Name</label>
-        <input type="text" class="form-control" id="name"><br>
+        <input type="text" class="form-control basic" id="name">
         <label for="age">Age</label>
-        <input type="text" class="form-control" id="age" ><br>
+        <input type="text" class="form-control basic" id="age" >
         <label for="gender">Gender</label>
-        <input type="text" class="form-control" id="gender"><br>
+        <input type="text" class="form-control basic" id="gender"><br>
+            <hr>
+        <h2>Prescription</h2>
         <label for="symptom">Symptoms</label>
         <input type="text" class="form-control" id="symptom"><br>
         <label for="disease">Disease</label>
